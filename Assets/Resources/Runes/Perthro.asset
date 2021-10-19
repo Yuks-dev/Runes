@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71559fc0eed1a4f79a3e76032a1d1222, type: 3}
+  m_Name: Perthro
+  m_EditorClassIdentifier: 
+  runeIndex: 17
+  runeName: Perthro
+  runeShortExplain: Fate, mysteries, occult, feminine fertility, chance, fortune,
+    mysticism, unknown
+  runePrefab: {fileID: 2766097747778267865, guid: ce31416d765054962bdb1af63e8e4835,
+    type: 3}
+  runeImage: {fileID: 21300000, guid: 7a1bb2f42a4a943e1b269e7fe88dcffc, type: 3}
+  runeDescription: "This is the gambler\u2019s rune and as such represents the cup
+    of dice, or fortune. It indicates that influences in life may be down to chance,
+    and so can go either well or not. The lesson here is to learn to take the hand
+    you\u2019ve been dealt and make lemonade out of lemons. In Tarot, this is would
+    be similar to the Wheel of Fortune card. It can also represent hidden meanings,
+    secrets, and change"

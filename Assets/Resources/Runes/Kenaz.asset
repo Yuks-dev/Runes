@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71559fc0eed1a4f79a3e76032a1d1222, type: 3}
+  m_Name: Kenaz
+  m_EditorClassIdentifier: 
+  runeIndex: 12
+  runeName: Kenaz
+  runeShortExplain: Enlightenment, knowledge, comprehension, insight, illumination,
+    calling, purpose, idea
+  runePrefab: {fileID: 2791837741954374263, guid: e46147902451f4f5cb8eaec9ed847374,
+    type: 3}
+  runeImage: {fileID: 21300000, guid: 094aea2bafbc04bee98a05979bf306e0, type: 3}
+  runeDescription: Kenaz is the flame or torch. As such, it represents the beacon
+    of truth and finding your true north guided by your own shining light. It can
+    indicate that that which was previously unknown may come to light, secrets may
+    be spilled, and you are on the right path of finding your true calling in life.
+    It also means knowledge, creativity, inspiration, vitality, regeneration and
+    energy

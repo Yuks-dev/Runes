@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71559fc0eed1a4f79a3e76032a1d1222, type: 3}
+  m_Name: Berkana
+  m_EditorClassIdentifier: 
+  runeIndex: 2
+  runeName: Berkana
+  runeShortExplain: Fertility, growth, renewal, new beginnings, birth, creation,
+    new projects, creativity
+  runePrefab: {fileID: 254132244769681995, guid: f1e345611cc4b486096d4b029ff78d06,
+    type: 3}
+  runeImage: {fileID: 21300000, guid: f5dd6fc9615054225aa3f2fb9cb2b7f4, type: 3}
+  runeDescription: Berkana is the rune of birth. It represents the Birch Goddess
+    and so indicates fertility and creation, not just of an actual birth (its traditional
+    meaning), but also of projects, partnerships and rebirth. It indicates mental
+    and physical growth, and a regenerative power and liberation of spirit

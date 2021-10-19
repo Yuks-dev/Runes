@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71559fc0eed1a4f79a3e76032a1d1222, type: 3}
+  m_Name: Ingwaz
+  m_EditorClassIdentifier: 
+  runeIndex: 9
+  runeName: Ingwaz
+  runeShortExplain: Fertility, virility, inner growth, virtue, peace, harmony
+  runePrefab: {fileID: 3345410093362296161, guid: 0044dbad64c5f4de8abc2477b970498a,
+    type: 3}
+  runeImage: {fileID: 21300000, guid: 8d7eb0cd98dc44a638022c355981ecb8, type: 3}
+  runeDescription: Ingwaz is the rune of fertility, representing the Earth God Ing.
+    It points to male fertility, common virtues, common sense, wellbeing, strength,
+    family, rest, and loose ends being tied up

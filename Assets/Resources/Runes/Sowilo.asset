@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71559fc0eed1a4f79a3e76032a1d1222, type: 3}
+  m_Name: Sowilo
+  m_EditorClassIdentifier: 
+  runeIndex: 19
+  runeName: Sowilo
+  runeShortExplain: Success, vitality, inspiration, justice, success, joy, happiness,
+    abundance
+  runePrefab: {fileID: 4182835237971125490, guid: e9f359007650f432ea7253125a63b11e,
+    type: 3}
+  runeImage: {fileID: 21300000, guid: b83f0f3249cac46408f84d20320a15ee, type: 3}
+  runeDescription: "Sowilo is the happy symbol of the sun. It represents a time of
+    joy, abundance, luck, and good fortune. It\u2019s a cause for celebration and
+    can indicate a success of your goals, optimal health and an elemental power"

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71559fc0eed1a4f79a3e76032a1d1222, type: 3}
+  m_Name: Isa
+  m_EditorClassIdentifier: 
+  runeIndex: 10
+  runeName: Isa
+  runeShortExplain: Suspension, delay, stillness, frustration, blocks, pause, waiting
+  runePrefab: {fileID: 4718682247318293454, guid: 4ef7e13a5dd9546498be026c801ef086,
+    type: 3}
+  runeImage: {fileID: 21300000, guid: 636f1e827ec8343f2be3f30eb605d888, type: 3}
+  runeDescription: "Isa represents ice. It\u2019s symbolic of the Hangman card in
+    the Tarot. It highlights the need to pause, wait, although there may be a feeling
+    of being stuck in ice, sometimes a break is what\u2019s needed to put things
+    into perspective. Waiting until we have gathered all the information, all sides
+    of the story, properly done our research, or simply allowed the Universe to unfold.
+    It can also indicate frustration or psychological blocks"

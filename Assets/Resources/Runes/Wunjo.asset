@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71559fc0eed1a4f79a3e76032a1d1222, type: 3}
+  m_Name: Wunjo
+  m_EditorClassIdentifier: 
+  runeIndex: 23
+  runeName: Wunjo
+  runeShortExplain: Pleasure, joy, feast, celebration, comfort, belonging, community,
+    success, festivities
+  runePrefab: {fileID: 6767597101762432871, guid: bea5a9954d6dc42f4a73e9df94992449,
+    type: 3}
+  runeImage: {fileID: 21300000, guid: 79afb72e2598c408383a3e19fa9a100f, type: 3}
+  runeDescription: "Wunjo is representative of the clan\u2019s flag and victory.
+    It represents triumph and joy, security, safety, celebration and belonging. It
+    can also indicate harmony, prosperity and spiritual rewards"

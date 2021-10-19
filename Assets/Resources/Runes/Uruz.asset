@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71559fc0eed1a4f79a3e76032a1d1222, type: 3}
+  m_Name: Uruz
+  m_EditorClassIdentifier: 
+  runeIndex: 22
+  runeName: Uruz
+  runeShortExplain: Strength, endurance, health, courage
+  runePrefab: {fileID: 7880011715613061789, guid: 937a1064e8f384d35a43b368c6da1eda,
+    type: 3}
+  runeImage: {fileID: 21300000, guid: de33273d2f07e4a5a92b9fe335769aa6, type: 3}
+  runeDescription: This is a stone of strength, endurance, hard work, perseverance,
+    motivation, and determination. It can indicate a time of great energy, speed
+    and health. It also shows increasing power and masculinity. Reversed, it may
+    indicate a loss of health, endurance, a blockage, dominance of others over you
+    or misdirected force

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71559fc0eed1a4f79a3e76032a1d1222, type: 3}
+  m_Name: Jera
+  m_EditorClassIdentifier: 
+  runeIndex: 11
+  runeName: Jera
+  runeShortExplain: Year, conclusion, harvest, life cycle, endings and beginnings,
+    abundance, learnings, growth
+  runePrefab: {fileID: 4348685196084421090, guid: 65ac4a7238bf8466daaf0e9f4ad58089,
+    type: 3}
+  runeImage: {fileID: 21300000, guid: afeabc6809d1442ee835f309821c2cd6, type: 3}
+  runeDescription: "Jera is representative of the harvest. It indicates that we can
+    now reap what we\u2019ve sown and enjoy our plentiful abundance. If you don\u2019t
+    feel like you have many blessings, it can show that either a breakthrough is
+    on the way, or it\u2019s time to take stock and express gratitude for what you
+    do have! It also represents the life cycle and cyclic nature of Mother Earth"

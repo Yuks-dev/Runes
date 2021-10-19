@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71559fc0eed1a4f79a3e76032a1d1222, type: 3}
+  m_Name: Dagaz
+  m_EditorClassIdentifier: 
+  runeIndex: 3
+  runeName: Dagaz
+  runeShortExplain: Day, awakening, consciousness, clarity, hope, balance, growth,
+    new cycles
+  runePrefab: {fileID: 27076144154105494, guid: 81a00abea212642c18fdbeaa32c8ee92,
+    type: 3}
+  runeImage: {fileID: 21300000, guid: e181d1c9c75a8497dac4207f9895c1ba, type: 3}
+  runeDescription: Dagaz represents dawn. It shows the coming of age and the ending
+    of a cycle. New beginnings are approaching and new breakthroughs, awareness and
+    awakenings are possible. It represents the transformative power of change and
+    that it is a good time to embark upon a fresh enterprise. A final, positive symbol
+    of hope, certainty and security

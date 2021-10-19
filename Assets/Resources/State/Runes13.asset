@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389c2bd5fb7e14a6bb9e9a3a6b3fa59b, type: 3}
+  m_Name: Runes13
+  m_EditorClassIdentifier: 
+  stateFormat: Runes13
+  runesCount: 13
+  stateDescription:
+  - Your personality
+  - Financial situation
+  - Family
+  - Home
+  - Creation and self-expression
+  - The world around and your health
+  - Love and marriage
+  - Death and inheritance
+  - Education and travel
+  - Career and social standing
+  - Friendship and pleasures
+  - Your inner world and mental health
+  - The future
+  - 

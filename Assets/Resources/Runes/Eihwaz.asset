@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71559fc0eed1a4f79a3e76032a1d1222, type: 3}
+  m_Name: Eihwaz
+  m_EditorClassIdentifier: 
+  runeIndex: 5
+  runeName: Eihwaz
+  runeShortExplain: "Connection, inspiration, endurance, sacred knowledge, protection,
+    life cycle\u2019s, divinity"
+  runePrefab: {fileID: 8650076237558163087, guid: 6ab6bb158805243db89667c4642216a7,
+    type: 3}
+  runeImage: {fileID: 21300000, guid: c17433e7b391a4714aa2a587dba62771, type: 3}
+  runeDescription: In Norse mythology, the Yew tree, Yggradisil, is representative
+    of The Tree Of Life. As such, it relates to the cycle of life, similar to the
+    Death Tarot card (signifying the dying of an old way of being or period of life).
+    It can also represent reliability, dependability, trustworthiness, enlightenment,
+    and a sense of purpose, symbolising the connection between all the worlds

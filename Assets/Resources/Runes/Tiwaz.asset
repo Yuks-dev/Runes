@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71559fc0eed1a4f79a3e76032a1d1222, type: 3}
+  m_Name: Tiwaz
+  m_EditorClassIdentifier: 
+  runeIndex: 21
+  runeName: Tiwaz
+  runeShortExplain: Leadership, rationality, victory, honour, bravery, courage, strength,
+    perseverance, endurance
+  runePrefab: {fileID: 9206936500005688871, guid: c29ef9e3aeea2469c9186eb7f72b0400,
+    type: 3}
+  runeImage: {fileID: 21300000, guid: 2d71709dfb7cf4510b428fcce39956df, type: 3}
+  runeDescription: "Tiwaz is representative of the warrior\u2019s arrowhead of the
+    God Tyr. It shows that you are capable of spearheading your way through all your
+    troubles and possess great leadership skills, authority and rationality. It can
+    indicate victory and knowing of your true strengths with a willingness to self-sacrifice"

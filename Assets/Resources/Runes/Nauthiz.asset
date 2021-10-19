@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71559fc0eed1a4f79a3e76032a1d1222, type: 3}
+  m_Name: Nauthiz
+  m_EditorClassIdentifier: 
+  runeIndex: 15
+  runeName: Nauthiz
+  runeShortExplain: Need, restriction, disagreements, resistance, survival, necessity,
+    lacking
+  runePrefab: {fileID: 2256999798092078936, guid: 411e5127f28d74efe938e028ccd8285e,
+    type: 3}
+  runeImage: {fileID: 21300000, guid: 504517f571e4b4e70b85c682a25501ef, type: 3}
+  runeDescription: "Nauthiz is indicative of our needs. What do you need to feel
+    emotionally stable and fulfilled? Are you taking enough time for yourself to
+    balance work, play and rest? Assessing what are our needs and where we may currently
+    be lacking can help us take better care of our future selves, we can\u2019t pour
+    form an empty cup after all. It can also indicate delays, restriction, and endurance.
+    This is a time to practice patience"
