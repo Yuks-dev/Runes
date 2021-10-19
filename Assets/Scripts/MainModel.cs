@@ -9,8 +9,10 @@ public class MainModel : Element
 
     public SaveSystem saveSystem;
     public GameObject runePrefab;
+
     public GameObject runesGame;
     public GameObject mainMenu;
+
     public List<StateData> stateList = new List<StateData>(4);
     public List<RunesData> runesList = new List<RunesData>(24);
 

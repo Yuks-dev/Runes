@@ -8,7 +8,7 @@ public class CameraController : Element
     public Transform runeView;
     public Transform chestView;
     public Transform beginView;
-    public Transform dailyView;
+    public Transform quickDivinationView;
 
     private void Awake()
     {
@@ -20,8 +20,8 @@ public class CameraController : Element
     public void MenuCameraView() => MovingCam(menuView, 3);
     public void GameCameraView() => MovingCam(gameView, 2);  
     public void RuneCameraView() => MovingCam(runeView, 2.5f);
-    public void ChestCameraView() => MovingCam(chestView, 2f);
-    public void DailyCameraView() => MovingCam(dailyView, 2f);
+    public void ChestCameraView() => MovingCam(chestView, 2);
+    public void QuickCameraView() => MovingCam(quickDivinationView, 1);
 
     private void MovingCam(Transform targetView, float speed)
     {
