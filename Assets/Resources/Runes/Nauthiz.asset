@@ -14,14 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 15
   runeName: Nauthiz
-  runeShortExplain: Need, restriction, disagreements, resistance, survival, necessity,
-    lacking
+  runeShortExplain: dissatisfaction, need, endurance, patience, pressure
   runePrefab: {fileID: 2256999798092078936, guid: 411e5127f28d74efe938e028ccd8285e,
     type: 3}
   runeImage: {fileID: 21300000, guid: 504517f571e4b4e70b85c682a25501ef, type: 3}
-  runeDescription: "Nauthiz is indicative of our needs. What do you need to feel
-    emotionally stable and fulfilled? Are you taking enough time for yourself to
-    balance work, play and rest? Assessing what are our needs and where we may currently
-    be lacking can help us take better care of our future selves, we can\u2019t pour
-    form an empty cup after all. It can also indicate delays, restriction, and endurance.
-    This is a time to practice patience"
+  runeDescription: 'Nauthiz is the need. It indicates dissatisfaction with one''s
+    current state, steady pressure of circumstances. One can feel it but can endure
+    it as well. Against all the odds, Nauthiz carries a lot of optimism: any circumstances
+    will change if you wait long enough.'

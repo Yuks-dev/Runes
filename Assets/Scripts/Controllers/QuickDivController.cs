@@ -1,21 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class QuickDivController : Element
 {
     public GameObject quickRune;
     public GameObject view;
-    private int countDown = 5;
 
-    public Text divinationText;
-    public Text runeName;
-    public Text count;
-
-    public RectTransform divinationExplain;
-    public RectTransform preLoader;
+    public MenuController menu;
+    public QuickDivUIView ui;
 
     private int rnd;
     private GameObject runeSign;
@@ -33,16 +25,16 @@ public class QuickDivController : Element
         runeSign = app.model.runesList[Random.Range(0, 24)].RunePrefab;
 
         app.cameraController.QuickCameraView();
-        preLoader.gameObject.SetActive(true);
+        menu.tapPlaces.gameObject.SetActive(false);
 
-        StartCoroutine(Timer());
+        ui.StartTimer();
         RuneAnimation();
     }
 
     private void RuneAnimation()
     {
         Sequence showRune = DOTween.Sequence();
-        showRune.PrependInterval(countDown);
+        showRune.PrependInterval(ui.countDown);
         showRune.AppendCallback(() => { onRotate = false; });
         showRune.Append(quickRune.transform.DORotate(new Vector3(0, 0, 180), 2).SetEase(Ease.InElastic));
         showRune.AppendCallback(() => { ShowDescription(); });
@@ -50,28 +42,16 @@ public class QuickDivController : Element
 
     private void ShowDescription()
     {
-        preLoader.gameObject.SetActive(false);
-        divinationExplain.gameObject.SetActive(true);
-
-        Instantiate(runeSign, quickRune.transform.position, runeSign.transform.rotation, view.gameObject.transform);
-        runeName.text = app.model.runesList[rnd].RuneName;
-        divinationText.text = app.model.runesList[rnd].RuneDescription;
-    }
-
-    private IEnumerator Timer()
-    {
-        int index = countDown;
-        for (int i = index; i >= 0; i--)
-        {
-            count.text = i.ToString();
-            yield return new WaitForSeconds(1);
-        }
+        ui.OnDescribe(rnd);
+        Instantiate(runeSign, quickRune.transform.position, transform.rotation, view.gameObject.transform);
     }
 
     public void BackToMenu()
     {
-        app.cameraController.MenuCameraView();
+        app.ad.ShowAd();
+        menu.SetStart();
         onRotate = true;
+
         for (int i = view.transform.childCount; i > 0; --i)
             DestroyImmediate(view.transform.GetChild(0).gameObject);
     }

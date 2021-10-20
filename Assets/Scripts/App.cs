@@ -14,6 +14,7 @@ public class App : MonoBehaviour
     //public MainView view;   // Viewers (only get data from models, send events to controllsers)
     public RuneController controller;   // Controllers (get events from views, update models)
     public CameraController cameraController;
+    public AdsManager ad;
 
     private void Awake() => s_Instance = this;
 }

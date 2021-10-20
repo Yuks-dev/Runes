@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 22
   runeName: Uruz
-  runeShortExplain: Strength, endurance, health, courage
+  runeShortExplain: power, potential, courage, endurance, persistence
   runePrefab: {fileID: 7880011715613061789, guid: 937a1064e8f384d35a43b368c6da1eda,
     type: 3}
   runeImage: {fileID: 21300000, guid: de33273d2f07e4a5a92b9fe335769aa6, type: 3}
-  runeDescription: This is a stone of strength, endurance, hard work, perseverance,
-    motivation, and determination. It can indicate a time of great energy, speed
-    and health. It also shows increasing power and masculinity. Reversed, it may
-    indicate a loss of health, endurance, a blockage, dominance of others over you
-    or misdirected force
+  runeDescription: Uruz is a powerful rune, the quintessence of energy, perseverance,
+    and motivation. It represents the potential to kick-start your projects and ideas
+    and drive them further on. It is spontaneous but helps to overcome any obstacles.
+    Uruz signifies the perfect time for a change.

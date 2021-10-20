@@ -14,13 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 10
   runeName: Isa
-  runeShortExplain: Suspension, delay, stillness, frustration, blocks, pause, waiting
+  runeShortExplain: slowness, delay, obstacle, patience, standstill
   runePrefab: {fileID: 4718682247318293454, guid: 4ef7e13a5dd9546498be026c801ef086,
     type: 3}
   runeImage: {fileID: 21300000, guid: 636f1e827ec8343f2be3f30eb605d888, type: 3}
-  runeDescription: "Isa represents ice. It\u2019s symbolic of the Hangman card in
-    the Tarot. It highlights the need to pause, wait, although there may be a feeling
-    of being stuck in ice, sometimes a break is what\u2019s needed to put things
-    into perspective. Waiting until we have gathered all the information, all sides
-    of the story, properly done our research, or simply allowed the Universe to unfold.
-    It can also indicate frustration or psychological blocks"
+  runeDescription: Isa is tangible, solid, inert, and overpoweringly forceful, like
+    Scandinavian ice. Everything that surrounds you will resist your forward movement,
+    and your progress will slow down. The rune brings stagnation and obstacles, a
+    spiritual standstill. Keep calm and wait for the hefty slab of ice blocking your
+    path to slowly melt and flow away.

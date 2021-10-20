@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 2
   runeName: Berkana
-  runeShortExplain: Fertility, growth, renewal, new beginnings, birth, creation,
-    new projects, creativity
+  runeShortExplain: fertility, protection, growth, creativity, relationship
   runePrefab: {fileID: 254132244769681995, guid: f1e345611cc4b486096d4b029ff78d06,
     type: 3}
   runeImage: {fileID: 21300000, guid: f5dd6fc9615054225aa3f2fb9cb2b7f4, type: 3}
-  runeDescription: Berkana is the rune of birth. It represents the Birch Goddess
-    and so indicates fertility and creation, not just of an actual birth (its traditional
-    meaning), but also of projects, partnerships and rebirth. It indicates mental
-    and physical growth, and a regenerative power and liberation of spirit
+  runeDescription: Berkana is caring, soft, and delicate; it favors new ideas and
+    creative projects. Berkana symbolizes growth and protection; it will do everything
+    possible to solve a problem. It promotes your relationships with other people
+    and yourself, your experience, knowledge, etc.

@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71559fc0eed1a4f79a3e76032a1d1222, type: 3}
   m_Name: Algiz
   m_EditorClassIdentifier: 
+  runeIndex: 0
   runeName: Algiz
-  runeShortExplain: Protection, guardian, awakening, courage, defence, instincts
+  runeShortExplain: protection, spirituality, opportunities, fortune, instincts
   runePrefab: {fileID: 2780691937887588784, guid: 1d964c10f76154efcb296ce7ff61f1ee,
     type: 3}
   runeImage: {fileID: 21300000, guid: ce63bf4bda9ea4ca69f4c231fa7eb353, type: 3}
-  runeDescription: Algiz is the elk, and so represents defence and protection. If
-    you get this one, it means that you have the internal power to manifest your
-    dreams and that your spirit guides are protecting you along your path. It is
-    said to act as a shield to guard you against evil. It can also represent an awakening
-    and strong intuition
+  runeDescription: Algiz is the rune of protection, passive, but quite efficient.
+    It is the rune of creativity, spirituality, and good luck. It tells you that
+    some new positive energies and opportunities are entering your life. Still, you
+    should understand that they are accompanied by abuse and adverse effects.

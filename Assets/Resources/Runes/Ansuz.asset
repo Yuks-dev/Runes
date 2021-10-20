@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 1
   runeName: Ansuz
-  runeShortExplain: Revelation, signs, visions
+  runeShortExplain: signs, message, communication, divine knowledge, revelations
   runePrefab: {fileID: 2959891415295544966, guid: 74e24ecc0b89f4942990246edb8595f3,
     type: 3}
   runeImage: {fileID: 21300000, guid: d35c572029f9a42868e973b426d6e19e, type: 3}
-  runeDescription: "Ansuz is the rune of communication. It\u2019s representative
-    of the ancestral God Odin and so indicates a divine message or insight arriving.
-    It can also mean good advice, wisdom, truth, inspiration and enthusiasm"
+  runeDescription: Ansuz is associated with Odin. Its essence is communication in
+    all forms, including interaction with higher powers and the subconscious. The
+    rune represents the world's will to speak with you. Be attentive to anything
+    you hear and see, and you may receive a sign.

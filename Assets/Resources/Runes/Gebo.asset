@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 7
   runeName: Gebo
-  runeShortExplain: Generosity, partnership, gifts, talents, charity, service, assistance,
-    luck, fortune
+  runeShortExplain: collaboration, assistance, allies, partnership, charity
   runePrefab: {fileID: 6279319069033775420, guid: 7a526aadcd358457fac98b30e39e750c,
     type: 3}
   runeImage: {fileID: 21300000, guid: 1393715cd4a14491bae92fcf24c1413f, type: 3}
-  runeDescription: "Gebo is the rune of gifts. It\u2019s a positive symbol that indicates
-    you are in the possession of many gifts and talents or that someone will bestow
-    upon you bountiful blessings. It also relates to generosity, balance, and positive
-    relationships"
+  runeDescription: Gebo means gift, but it is also the rune of partnership, union,
+    and relations. It's a value, but not something you can buy or sell. The rune
+    indicates collaboration and creation in any form. If you are striving to complete
+    a project successfully, look for allies and start working with them. You are
+    on the right track.

@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 20
   runeName: Thurisaz
-  runeShortExplain: Defence, challenge, danger
+  runeShortExplain: protection, challenge, danger, energy, strength
   runePrefab: {fileID: 9213961422902646241, guid: 52947d30fbf354030be1e949139dde19,
     type: 3}
   runeImage: {fileID: 21300000, guid: 406e1bf2142a142bbb625649897721c1, type: 3}
-  runeDescription: "This represents Thor\u2019s hammer or a giant. As such, it indicates
-    a powerful direction of energy and force, for either destruction or defence,
-    so may also indicate conflict. This could be cathartic, cleansing and purgative."
+  runeDescription: "Thurisaz is associated with Thor's hammer, Mj\xF6lnir. It signifies
+    that you've entered the path of challenges, and everything depends on you alone.
+    The situation requires reflection. Take it slow, postpone any activity. When
+    you finish, a new path will be revealed."

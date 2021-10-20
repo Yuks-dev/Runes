@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 14
   runeName: Mannaz
-  runeShortExplain: Humanity, collective, mortality, community, relationships, morals,
-    values
+  runeShortExplain: community, relationship, humanity, values, recognition
   runePrefab: {fileID: 3283233734671058512, guid: 4920008b489d646cf840d730d29f21e1,
     type: 3}
   runeImage: {fileID: 21300000, guid: 8b3c66d2e7f7d47478ca50bc44028e03, type: 3}
-  runeDescription: Mannaz is representative of humankind and humanity. It encompasses
-    yourself and identity, and relationship towards others. It is social order and
-    cooperation, our sense of morals and values
+  runeDescription: Mannaz is the rune of socialization. It appeals to the man as
+    a part of the community. It is associated with independence and a rational mind,
+    with work and social relationships. Mannaz advises that you remain modest. It
+    can also signify success in business and public recognition or unhurried, thoughtful
+    self-perfection.

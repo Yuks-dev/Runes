@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Ingwaz
   m_EditorClassIdentifier: 
   runeIndex: 9
-  runeName: Ingwaz
-  runeShortExplain: Fertility, virility, inner growth, virtue, peace, harmony
+  runeName: Inguz
+  runeShortExplain: 'beginning and end, fertility, harmony, inner growth, possibility '
   runePrefab: {fileID: 3345410093362296161, guid: 0044dbad64c5f4de8abc2477b970498a,
     type: 3}
   runeImage: {fileID: 21300000, guid: 8d7eb0cd98dc44a638022c355981ecb8, type: 3}
-  runeDescription: Ingwaz is the rune of fertility, representing the Earth God Ing.
-    It points to male fertility, common virtues, common sense, wellbeing, strength,
-    family, rest, and loose ends being tied up
+  runeDescription: 'Inguz represents fertility. It is the seed, the life, the beginning,
+    and the end. The rune symbolizes an event that completes a stage and begins the
+    next one: birth, wedding, hiring, graduation, etc. An Inguz event is accompanied
+    by joy. When you feel the vibes of this rune, you can do the impossible.'

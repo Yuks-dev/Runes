@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 23
   runeName: Wunjo
-  runeShortExplain: Pleasure, joy, feast, celebration, comfort, belonging, community,
-    success, festivities
+  runeShortExplain: joy, creativity, renewal, productivity, success
   runePrefab: {fileID: 6767597101762432871, guid: bea5a9954d6dc42f4a73e9df94992449,
     type: 3}
   runeImage: {fileID: 21300000, guid: 79afb72e2598c408383a3e19fa9a100f, type: 3}
-  runeDescription: "Wunjo is representative of the clan\u2019s flag and victory.
-    It represents triumph and joy, security, safety, celebration and belonging. It
-    can also indicate harmony, prosperity and spiritual rewards"
+  runeDescription: Wunjo supplies you with strength and energy, but it does not impose
+    its will. It is the rune of joy, creativity, life opportunities, purification,
+    inner freedom, renewal. It's all about being happy with your life. Wunjo may
+    help establish good relationships, be more productive, and improve your well-being.

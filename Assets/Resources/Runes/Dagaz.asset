@@ -14,13 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 3
   runeName: Dagaz
-  runeShortExplain: Day, awakening, consciousness, clarity, hope, balance, growth,
-    new cycles
+  runeShortExplain: change, prosperity, luck, personal growth, breakthrough
   runePrefab: {fileID: 27076144154105494, guid: 81a00abea212642c18fdbeaa32c8ee92,
     type: 3}
   runeImage: {fileID: 21300000, guid: e181d1c9c75a8497dac4207f9895c1ba, type: 3}
-  runeDescription: Dagaz represents dawn. It shows the coming of age and the ending
-    of a cycle. New beginnings are approaching and new breakthroughs, awareness and
-    awakenings are possible. It represents the transformative power of change and
-    that it is a good time to embark upon a fresh enterprise. A final, positive symbol
-    of hope, certainty and security
+  runeDescription: Dagaz is one of the most positive runes. It solves problems and
+    dispels darkness; it foretells significant changes. The rune can represent luck
+    or an inevitable breakthrough in self-change. It presages a period of prosperity,
+    an unexpected profit.

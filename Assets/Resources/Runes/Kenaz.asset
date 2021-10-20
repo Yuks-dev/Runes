@@ -14,14 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 12
   runeName: Kenaz
-  runeShortExplain: Enlightenment, knowledge, comprehension, insight, illumination,
-    calling, purpose, idea
+  runeShortExplain: 'Understanding, vision, knowledge, realization, insight '
   runePrefab: {fileID: 2791837741954374263, guid: e46147902451f4f5cb8eaec9ed847374,
     type: 3}
   runeImage: {fileID: 21300000, guid: 094aea2bafbc04bee98a05979bf306e0, type: 3}
-  runeDescription: Kenaz is the flame or torch. As such, it represents the beacon
-    of truth and finding your true north guided by your own shining light. It can
-    indicate that that which was previously unknown may come to light, secrets may
-    be spilled, and you are on the right path of finding your true calling in life.
-    It also means knowledge, creativity, inspiration, vitality, regeneration and
-    energy
+  runeDescription: According to Norse cosmology, fire is an essential part of creation
+    and destruction. Kenaz is the incarnation of the primary fire. It stands for
+    expanding horizons, understanding, clearer vision, a new level of knowledge.
+    It indicates that you can expect an insight, a sudden flash of realization very
+    soon.

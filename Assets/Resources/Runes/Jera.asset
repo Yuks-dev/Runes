@@ -14,13 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 11
   runeName: Jera
-  runeShortExplain: Year, conclusion, harvest, life cycle, endings and beginnings,
-    abundance, learnings, growth
+  runeShortExplain: harvest, year, reward, abundance, hard work
   runePrefab: {fileID: 4348685196084421090, guid: 65ac4a7238bf8466daaf0e9f4ad58089,
     type: 3}
   runeImage: {fileID: 21300000, guid: afeabc6809d1442ee835f309821c2cd6, type: 3}
-  runeDescription: "Jera is representative of the harvest. It indicates that we can
-    now reap what we\u2019ve sown and enjoy our plentiful abundance. If you don\u2019t
-    feel like you have many blessings, it can show that either a breakthrough is
-    on the way, or it\u2019s time to take stock and express gratitude for what you
-    do have! It also represents the life cycle and cyclic nature of Mother Earth"
+  runeDescription: Jera represents a favorable outcome, a plentiful harvest, and
+    the time and actions needed to let crops give that harvest. Jera is all about
+    time and the reward that awaits you, but only if you work hard and long enough
+    despite difficulties and lack of understanding. It indicates a positive outcome,
+    legal power, and financial inflow.

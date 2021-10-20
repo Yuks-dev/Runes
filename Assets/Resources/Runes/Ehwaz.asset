@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 4
   runeName: Ehwaz
-  runeShortExplain: Progress, movement, harmony, trust, loyalty, friendship, assistance,
-    duality, animal instincts
+  runeShortExplain: travel, experience, progress, loyalty, duality
   runePrefab: {fileID: 260302140073672020, guid: 3240fc30ae5094de9925bf559bedbaaa,
     type: 3}
   runeImage: {fileID: 21300000, guid: a2235dbab9215491bb85b92235729072, type: 3}
-  runeDescription: "Ehwaz is the horse. This represents man\u2019s trusty aid, our
-    only form of transport in times past. It indicates a moving forward and change
-    for the better with gradual but steady progress. It can also show teamwork, trust
-    and loyalty"
+  runeDescription: Ehwaz is associated with Sleipnir, Odin's eight-legged horse.
+    This is the rune of traveling and expanding your horizons. The rune enables you
+    to recognize the differences in people's nature. Ehwaz foretells new places of
+    dwelling, views, or lifestyle. It is associated with stable progress, unhindered
+    yet slow growth.

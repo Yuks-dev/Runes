@@ -8,6 +8,7 @@ public class BagView : Element
     public Image force;
     public Transform runesParent;
 
+    private bool onClick = true;
     private int runesFrombag = 0;
     private Vector3 startPos;
 
@@ -17,37 +18,50 @@ public class BagView : Element
         startPos = transform.position;
     }
 
-    private void Update() => force.fillAmount -= 0.2f * Time.deltaTime;
+    private void Update()
+    {
+        if(onClick)
+            force.fillAmount -= 0.2f * Time.deltaTime;
+    }
 
     public void TapChest()
     {
-        force.fillAmount += 0.3f;
+        force.fillAmount += 0.1f;
         ShakingBag(startPos);
 
         if (force.fillAmount == 1)
-            ThrowRunes();
+        {
+            runesFrombag++;
+            ForceAnimation();
+            SpawnRunes(runesParent);
+        }
 
         if (runesFrombag == app.controller.state.RunesCount)
             StartDivination();
     }
 
-    private void ThrowRunes()
+    private void ForceAnimation()
     {
-        force.fillAmount = 0;
-        runesFrombag++;
-        SpawnRunes(runesParent);
+        Sequence complete = DOTween.Sequence();
+        complete.PrependCallback(() => { force.fillAmount = 1; tapButton.SetActive(false); onClick = false; });
+        complete.Append(force.gameObject.transform.DOScale(1.02f, 0.2f).SetEase(Ease.OutBack));
+        complete.Join(force.DOColor(Color.green,0.2f));
+        complete.Append(force.gameObject.transform.DOScale(1, 0.2f));
+        complete.Join(force.DOColor(Color.white, 0.2f));
+        complete.AppendCallback(() => { tapButton.SetActive(true); onClick = true; });
     }
 
     private void StartDivination()
     {
         tapButton.SetActive(false);
-        app.controller.runeActive = false;
+        force.gameObject.SetActive(false);
 
+        app.controller.runeActive = false;
         app.controller.ui.SetState();
-        app.controller.ui.ActivatePanels(true);
         app.cameraController.GameCameraView();
+
         transform.DOMoveY(10, 1).SetEase(Ease.InBack);
-        Destroy(gameObject, 2);
+        Destroy(gameObject, 1.5f);
     }
 
     private void SpawnRunes(Transform parent) // Component

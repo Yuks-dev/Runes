@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 13
   runeName: Laguz
-  runeShortExplain: Water, intuition, imagination, healing, dreams, mysteries, insight,
-    instinct, knowing
+  runeShortExplain: 'intuition, water, knowledge, flexibility, instinct '
   runePrefab: {fileID: 8469460774790543583, guid: 424afbe89f3744ec59f93754739e9016,
     type: 3}
   runeImage: {fileID: 21300000, guid: 8f1e72b2f606b4113b9bd883eb646a70, type: 3}
-  runeDescription: Laguz represents the element of water and so is tied to our emotions,
-    dreams and intuition. It indicates a healing power of renewal, heightened imagination
-    and psychic abilities. It can also relate to mysteries, secrets, the unknown
-    and the underworld
+  runeDescription: "Laguz represents water \u2014 the flow of life. It's a force
+    that carries and supports you. Another meaning of the rune is intuition, some
+    practical knowledge. Laguz is void of aggression. It teaches you to adapt to
+    the circumstances without changing your inner self. You're led and protected
+    by high energies."

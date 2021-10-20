@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 19
   runeName: Sowilo
-  runeShortExplain: Success, vitality, inspiration, justice, success, joy, happiness,
-    abundance
+  runeShortExplain: health, success, integrity, order, fulfillment
   runePrefab: {fileID: 4182835237971125490, guid: e9f359007650f432ea7253125a63b11e,
     type: 3}
   runeImage: {fileID: 21300000, guid: b83f0f3249cac46408f84d20320a15ee, type: 3}
-  runeDescription: "Sowilo is the happy symbol of the sun. It represents a time of
-    joy, abundance, luck, and good fortune. It\u2019s a cause for celebration and
-    can indicate a success of your goals, optimal health and an elemental power"
+  runeDescription: "Sowilo is the most energetically charged rune \u2014 it is the
+    Sun, an auspicious symbol. \u0421haos is impossible in its presence. Sowilo foretells
+    the climb to the heights of power, health, and success. It stands for integrity,
+    the craving for personal fulfillment, and shows the path you should take."

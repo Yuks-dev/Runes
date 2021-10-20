@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 21
   runeName: Tiwaz
-  runeShortExplain: Leadership, rationality, victory, honour, bravery, courage, strength,
-    perseverance, endurance
+  runeShortExplain: patience, sacrifice, strength, activity, courage
   runePrefab: {fileID: 9206936500005688871, guid: c29ef9e3aeea2469c9186eb7f72b0400,
     type: 3}
   runeImage: {fileID: 21300000, guid: 2d71709dfb7cf4510b428fcce39956df, type: 3}
-  runeDescription: "Tiwaz is representative of the warrior\u2019s arrowhead of the
-    God Tyr. It shows that you are capable of spearheading your way through all your
-    troubles and possess great leadership skills, authority and rationality. It can
-    indicate victory and knowing of your true strengths with a willingness to self-sacrifice"
+  runeDescription: 'Tiwaz represents the Great Warrior, who once put his hand into
+    the wolf''s mouth. The rune is all about getting ready to sacrifice. It indicates
+    an active period in your life. There may be battles, fights, adventures, stress,
+    important events. But patience can also help: some fortresses can only be gained
+    by siege.'

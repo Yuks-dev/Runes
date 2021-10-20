@@ -30,6 +30,7 @@ public class RuneController : Element
     private void SetRunesOnScene(List<RunesData> r_scene, StateData r_state, List<RunesData> mainList) // Component
     {
         r_scene.Clear();
+
         for (int i = 0; i < r_state.RunesCount; i++)
         {
             int rnd = Random.Range(0, r_state.RunesCount);

@@ -80,7 +80,7 @@ public class ObjectView : Element
         // Rune fly away
         showRune.AppendCallback(() => { RuneAway(); });
         showRune.Append(transform.DOMove(new Vector3(3, 8, -7), 2));
-        showRune.AppendCallback(() => { Destroy(gameObject); });
+        showRune.AppendCallback(() => { Destroy(gameObject); app.controller.ui.SetState(); });
     }
 
     // For RuneAnimation

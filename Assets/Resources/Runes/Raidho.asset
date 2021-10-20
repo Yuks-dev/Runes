@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 18
   runeName: Raidho
-  runeShortExplain: Progress, movement, evolution, perspective, journey, travel
+  runeShortExplain: road, movement, travel, course, evolution
   runePrefab: {fileID: 8116088381083987977, guid: fd025ccdc74504aee95354093a5f9689,
     type: 3}
   runeImage: {fileID: 21300000, guid: 070c253a3fe2c448aaae8d7b85f0b6c3, type: 3}
-  runeDescription: Raidho is indicative of a journey and represents a wheel. This
-    could be both physical travel, as in a holiday or house move, or a spiritual
-    voyage in the expansion of your horizons. It can also indicate things being put
-    into perspective, evolution and the cycle of life
+  runeDescription: "Raidho is associated with the movement: atoms, blood, planets,
+    the Sun itself. The rune is all about roads; it means that you're on the way.
+    Trust the course of events and yourself. Do not waste your time on unnecessary
+    reasoning and doubts \u2013 just keep walking."

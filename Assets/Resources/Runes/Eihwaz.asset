@@ -14,13 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 5
   runeName: Eihwaz
-  runeShortExplain: "Connection, inspiration, endurance, sacred knowledge, protection,
-    life cycle\u2019s, divinity"
+  runeShortExplain: transition, sacred knowledge, past, present, and future, protection,
+    inspiration
   runePrefab: {fileID: 8650076237558163087, guid: 6ab6bb158805243db89667c4642216a7,
     type: 3}
   runeImage: {fileID: 21300000, guid: c17433e7b391a4714aa2a587dba62771, type: 3}
-  runeDescription: In Norse mythology, the Yew tree, Yggradisil, is representative
-    of The Tree Of Life. As such, it relates to the cycle of life, similar to the
-    Death Tarot card (signifying the dying of an old way of being or period of life).
-    It can also represent reliability, dependability, trustworthiness, enlightenment,
-    and a sense of purpose, symbolising the connection between all the worlds
+  runeDescription: Eihwaz is related to Yggdrasil, the sacred tree of Norse cosmology.
+    It is a rune of transition, past, present, and future; sometimes, it is linked
+    with death. Eihwaz indicates certain obstacles but also promises a favorable
+    outcome. It protects you from evil and provides help from ancestors.

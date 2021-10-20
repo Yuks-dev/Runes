@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,7 +9,7 @@ public class PreloadView : MonoBehaviour
 
     private void Start()
     {
-        Invoke(nameof(Loading),2);
+        Invoke(nameof(Loading),1);
     }
 
     private void Loading()

@@ -14,15 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeIndex: 8
   runeName: Hagalaz
-  runeShortExplain: Destruction, natural wrath, uncontrolled forces, testing, change,
-    external input
+  runeShortExplain: natural forces, danger, change, contradictions, unexpectedness
   runePrefab: {fileID: 4423897640160240667, guid: a467abd5535704dfba858d26a155ad47,
     type: 3}
   runeImage: {fileID: 21300000, guid: 442d637f5a0d14b9198e212e1020b466, type: 3}
-  runeDescription: Hagalaz represents hail. This natural form of disaster which strikes
-    out of the blue and has the power to destroy much needed crops, is similarly
-    indicative of sudden and cataclismic change. Similar to The Tower card in the
-    tarot, Hagalaz represents an unavoidable change that is out of our hands, but
-    how destructive it ends up being is dependant on whether we are capable of weathering
-    its storm with grace. As they say, some storms come to clear our path. The lesson
-    of Hagalaz is to learn from our hardships and grow through our mistakes
+  runeDescription: 'Hagalaz is associated with the natural forces and the energies
+    of the elements. Something spontaneous has entered your life. Expect anything:
+    trouble, failed plans, etc. It is a symbol of danger, contradictions, and losses.
+    Change, innovation, and liberation are the qualities of this rune.'
