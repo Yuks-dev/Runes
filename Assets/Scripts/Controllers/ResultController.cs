@@ -14,6 +14,8 @@ public class ResultController : Element
 
     private void Start()
     {
+        app.ad.RequestInterstitial();
+
         if (app.model.currentState == MainModel.ChooseState.Runes4)
             runes4.SetActive(true);
 
@@ -25,6 +27,8 @@ public class ResultController : Element
 
         ShowRuneResult(0);
     }
+
+    private void OnDisable() => app.ad.ShowInterstitialAD();
 
     public void ShowRuneResult(int index)
     {

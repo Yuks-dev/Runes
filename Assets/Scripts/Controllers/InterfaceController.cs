@@ -32,7 +32,7 @@ public class InterfaceController : Element
     public void ShowDescription()
     {
         descBubble.DOAnchorPos(new Vector3(0,0,0),1);
-        description.DOAnchorPosY(-120, 1);
+        description.DOAnchorPosY(-60, 1);
         descPanel.transform.DOLocalMoveY(410, 1).SetEase(Ease.OutQuart);
         isShown = true;
     }
@@ -40,7 +40,7 @@ public class InterfaceController : Element
     public void HideDescription()
     {
         descBubble.DOAnchorPos(new Vector3(190, -140, 0), 1);
-        description.DOAnchorPosY(-250, 1);
+        description.DOAnchorPosY(-260, 1);
         descPanel.transform.DOLocalMoveY(-90, 1).SetEase(Ease.OutQuart);
         isShown = false;
     }

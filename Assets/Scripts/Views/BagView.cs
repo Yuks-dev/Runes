@@ -4,64 +4,52 @@ using UnityEngine.UI;
 
 public class BagView : Element
 {
-    public GameObject tapButton;
-    public Image force;
+    public Image progress;
     public Transform runesParent;
+    public GameObject tapButton;
 
-    private bool onClick = true;
     private int runesFrombag = 0;
     private Vector3 startPos;
 
     private void Start()
     {
-        app.cameraController.ChestCameraView();
+        app.cam.ChestCameraView();
         startPos = transform.position;
     }
 
     private void Update()
     {
-        if(onClick)
-            force.fillAmount -= 0.2f * Time.deltaTime;
+        progress.fillAmount -= 0.1f * Time.deltaTime;
     }
 
     public void TapChest()
     {
-        force.fillAmount += 0.1f;
+        app.aux.ChestSound();
+        progress.fillAmount += 0.2f;
         ShakingBag(startPos);
 
-        if (force.fillAmount == 1)
+        if (progress.fillAmount == 1)
         {
             runesFrombag++;
-            ForceAnimation();
+            progress.gameObject.transform.DOPunchScale(new Vector3(0.02f, 0.1f), 0.3f, 1);
             SpawnRunes(runesParent);
         }
 
         if (runesFrombag == app.controller.state.RunesCount)
+        {
+            tapButton.gameObject.SetActive(false);
+            progress.gameObject.SetActive(false);
             StartDivination();
-    }
-
-    private void ForceAnimation()
-    {
-        Sequence complete = DOTween.Sequence();
-        complete.PrependCallback(() => { force.fillAmount = 1; tapButton.SetActive(false); onClick = false; });
-        complete.Append(force.gameObject.transform.DOScale(1.02f, 0.2f).SetEase(Ease.OutBack));
-        complete.Join(force.DOColor(Color.green,0.2f));
-        complete.Append(force.gameObject.transform.DOScale(1, 0.2f));
-        complete.Join(force.DOColor(Color.white, 0.2f));
-        complete.AppendCallback(() => { tapButton.SetActive(true); onClick = true; });
+        }  
     }
 
     private void StartDivination()
     {
-        tapButton.SetActive(false);
-        force.gameObject.SetActive(false);
-
-        app.controller.runeActive = false;
         app.controller.ui.SetState();
-        app.cameraController.GameCameraView();
-
-        transform.DOMoveY(10, 1).SetEase(Ease.InBack);
-        Destroy(gameObject, 1.5f);
+        app.cam.GameCameraView();
+        Sequence bagOut = DOTween.Sequence();
+        bagOut.Append(transform.DOMoveY(10, 1).SetEase(Ease.InBack));
+        bagOut.AppendCallback(() => { app.controller.runeActive = false; Destroy(gameObject); });
     }
 
     private void SpawnRunes(Transform parent) // Component

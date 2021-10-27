@@ -10,18 +10,15 @@ public class CameraController : Element
     public Transform beginView;
     public Transform quickDivinationView;
 
-    private void Awake()
-    {
-        app.cameraController = this;
-        //transform.position = beginView.position;
-        //transform.rotation = beginView.rotation;
-    }
+    private void Awake() => app.cam = this;
 
-    //public void MenuCameraView() => MovingCam(menuView, 3);
-    public void GameCameraView() => MovingCam(gameView, 2);  
+    public void GameCameraView() => MovingCam(gameView, 2);         
     public void RuneCameraView() => MovingCam(runeView, 2.5f);
-    public void ChestCameraView() => MovingCam(chestView, 2);
-    public void QuickCameraView() => MovingCam(quickDivinationView, 2);
+    public void ChestCameraView()
+    {
+        app.aux.TransitionSound();
+        MovingCam(chestView, 2);
+    }
 
     private void MovingCam(Transform targetView, float speed)
     {
@@ -34,6 +31,15 @@ public class CameraController : Element
         Sequence move = DOTween.Sequence();
         move.Append(transform.DORotateQuaternion(menuView.rotation, 2).SetEase(Ease.OutBack));
         move.Join(transform.DOMove(menuView.position, 2).SetEase(Ease.OutCubic));
+        move.AppendCallback(() => { objectOn.gameObject.SetActive(true); });
+    }
+
+    public void OnQuickMove(GameObject objectOn)
+    {
+        app.aux.TransitionSound();
+        Sequence move = DOTween.Sequence();
+        move.Append(transform.DORotateQuaternion(quickDivinationView.rotation, 2).SetEase(Ease.OutBack));
+        move.Join(transform.DOMove(quickDivinationView.position, 2).SetEase(Ease.OutCubic));
         move.AppendCallback(() => { objectOn.gameObject.SetActive(true); });
     }
 }

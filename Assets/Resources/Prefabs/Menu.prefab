@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 1402219341704346021}
   - component: {fileID: 1654254371771132392}
   m_Layer: 5
-  m_Name: Preload
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,8 +159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -560, y: 136}
-  m_SizeDelta: {x: 756.1348, y: 163.2842}
+  m_AnchoredPosition: {x: 560, y: 136}
+  m_SizeDelta: {x: 755, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1402219341704346021
 CanvasRenderer:
@@ -440,8 +440,9 @@ GameObject:
   - component: {fileID: 7777897918770695789}
   - component: {fileID: 484845666416621180}
   - component: {fileID: 8907987083609689782}
+  - component: {fileID: 7263509580668845120}
   m_Layer: 5
-  m_Name: Preload
+  m_Name: Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -529,6 +530,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7263509580668845120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076238819354358845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f289e12820a1494d91c4fec7cb64f01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countDown: 5
+  count: {fileID: 1910371961158049328}
 --- !u!1 &1415342577005114243
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,8 +811,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -560, y: -75}
-  m_SizeDelta: {x: 356.4757, y: 179.9452}
+  m_AnchoredPosition: {x: 560, y: -75}
+  m_SizeDelta: {x: 355, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1981973873501025614
 CanvasRenderer:
@@ -5966,15 +5981,16 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 5310952745509484495}
   m_Father: {fileID: 3098490886455387678}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -200, y: -200}
-  m_SizeDelta: {x: 75, y: 75}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: -90}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0, y: 1}
 --- !u!222 &7888421991054913138
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6003,7 +6019,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4a36f918a428f4b3eb127c63e566640b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e987884dd50bd41438e786acce50ba5c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11323,6 +11339,81 @@ MonoBehaviour:
     rune of creativity, spirituality, and good luck. It tells you that some new positive
     energies and opportunities are entering your life. Still, you should understand
     that they are accompanied by abuse and adverse effects.
+--- !u!1 &6189979131554097575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5310952745509484495}
+  - component: {fileID: 5348214602467997161}
+  - component: {fileID: 2390787454326835040}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5310952745509484495
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6189979131554097575}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5992419893434596103}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -30, y: 30}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5348214602467997161
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6189979131554097575}
+  m_CullTransparentMesh: 1
+--- !u!114 &2390787454326835040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6189979131554097575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4a36f918a428f4b3eb127c63e566640b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &6491091070123596636
 GameObject:
   m_ObjectHideFlags: 0
@@ -11359,7 +11450,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -525, y: 0}
+  m_AnchoredPosition: {x: 525, y: 0}
   m_SizeDelta: {x: 945, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4308453764140410945
@@ -11434,8 +11525,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -245.45135, y: 260}
-  m_SizeDelta: {x: 275, y: 100}
+  m_AnchoredPosition: {x: -200, y: 275}
+  m_SizeDelta: {x: 368.2537, y: 127.6847}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &27372393924390455
 CanvasRenderer:
@@ -11471,7 +11562,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 100
+    m_MaxSize: 138
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -12387,7 +12478,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6338845251012730096}
   - component: {fileID: 4435993535726943937}
-  - component: {fileID: 3254098324411860021}
   m_Layer: 0
   m_Name: QuickDivination
   m_TagString: Untagged
@@ -12430,25 +12520,10 @@ MonoBehaviour:
   quickRune: {fileID: 145540580722537149}
   view: {fileID: 4418190617027687731}
   menu: {fileID: 7641533420861344529}
-  ui: {fileID: 3254098324411860021}
---- !u!114 &3254098324411860021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8413618051069237169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e70162a93f234c89b0807ed43af0005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countDown: 5
+  counter: {fileID: 7263509580668845120}
+  divinationPanel: {fileID: 3098490886455387678}
   divinationText: {fileID: 5243038623099012947}
   runeName: {fileID: 4065247366821664573}
-  count: {fileID: 1910371961158049328}
-  divinationExplain: {fileID: 3098490886455387678}
-  preLoader: {fileID: 7267183410859302358}
 --- !u!1 &8478108854665353808
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,13 +25,14 @@ public class ObjectView : Element
 
     private void OnMouseDown()
     {
+        app.aux.RuneSound();
         transform.rotation = Quaternion.identity;
         rb.freezeRotation = true;
     }
 
     private void OnMouseDrag()
     {
-        if(!app.controller.runeActive)
+        if (!app.controller.runeActive)
         {
             Vector3 down = new Vector3(transform.position.x, 3f, transform.position.z);
             Vector3 drag = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
@@ -42,17 +43,21 @@ public class ObjectView : Element
 
     private void OnCollisionEnter(Collision collision)
     {
+        
         if (collision.gameObject.CompareTag("RunePlace"))
         {
             runeSign = app.controller.runesOnScene[app.controller.runeCount].RunePrefab;
             app.controller.runeCount++;
 
+            app.aux.PortalSound();
             Freezer();
             Spawner(magicSmoke);
             RuneAnimation();
             app.controller.ui.DescriptionText(app.controller.runeCount);
             app.controller.MakeAvailable();
         }
+        else
+            app.aux.RuneSound();
     }
 
     private void Freezer()
@@ -70,22 +75,23 @@ public class ObjectView : Element
 
         // Rune goes up
         showRune.Append(transform.DOMove(new Vector3(0, 4, -1), 1).SetEase(Ease.OutBounce)); 
-        showRune.AppendCallback(() => { app.cameraController.RuneCameraView(); });
+        showRune.AppendCallback(() => { app.cam.RuneCameraView(); });
 
         // Rune rotate
         showRune.Join(transform.DORotate(new Vector3(0, 0, 180), 2).SetEase(Ease.InElastic)); 
-        showRune.AppendCallback(() => { RuneExpalain(); });
+        showRune.AppendCallback(() => { RuneExplain(); app.aux.RotateSound(); });
         showRune.AppendInterval(3);
 
         // Rune fly away
         showRune.AppendCallback(() => { RuneAway(); });
         showRune.Append(transform.DOMove(new Vector3(3, 8, -7), 2));
-        showRune.AppendCallback(() => { Destroy(gameObject); app.controller.ui.SetState(); });
+        showRune.AppendCallback(() => { StartNext(); });
     }
 
     // For RuneAnimation
-    private void RuneExpalain()
+    private void RuneExplain()
     {
+        app.aux.OpenSound();
         Spawner(runeSign);
         Spawner(shining);
         app.controller.ui.ShowDescription();
@@ -95,8 +101,14 @@ public class ObjectView : Element
     private void RuneAway()
     {
         app.controller.ui.PrepareNextRune();
-        app.cameraController.GameCameraView();
+        app.cam.GameCameraView();
+    }
+
+    private void StartNext()
+    {
+        app.controller.ui.SetState();
         app.controller.runeActive = false;
+        Destroy(gameObject);
     }
 
     private void Spawner(GameObject obj) // Component

@@ -1,23 +1,64 @@
 using UnityEngine;
+using System;
 using GoogleMobileAds.Api;
+using UnityEngine.UI;
 
-public class AdsManager : MonoBehaviour
+public class AdsManager : Element
 {
-    private InterstitialAd interAd;
-    private string InterAdID = "ca-app-pub-3940256099942544/1033173712";
+    public Text message;
+    private InterstitialAd interstitialAd;
+    private string interstitialAd_ID = "ca-app-pub-3940256099942544/1033173712";
 
-    private void OnEnable()
+    void Start()
     {
-        interAd = new InterstitialAd(InterAdID);
+        MobileAds.Initialize((initStatus) => { });
+        RequestInterstitial();
+    }
+
+    public void RequestInterstitial()
+    {
+        this.interstitialAd = new InterstitialAd(interstitialAd_ID);
+
+        this.interstitialAd.OnAdClosed += HandleOnAdClosed;
+        this.interstitialAd.OnAdLoaded += HandleOnAdLoaded;
+        this.interstitialAd.OnAdFailedToLoad += HandleOnAdFailedToLoad;
+        this.interstitialAd.OnAdOpening += HandleOnAdOpened;
+
         AdRequest adRequest = new AdRequest.Builder().Build();
-        interAd.LoadAd(adRequest);
+        this.interstitialAd.LoadAd(adRequest);
     }
 
-    public void ShowAd()
+    public void ShowInterstitialAD()
     {
-        if (interAd.IsLoaded())
-            interAd.Show();
+        if (this.interstitialAd.IsLoaded())
+            this.interstitialAd.Show();
     }
 
-    private void Awake() => MobileAds.Initialize(initStatus => { });
+    public void ClearAds()
+    {
+        if (this.interstitialAd != null)
+            this.interstitialAd.Destroy();
+    }
+
+    public void HandleOnAdLoaded(object sender, EventArgs args)
+    {
+        message.text = "Ad Loaded";
+    }
+
+    public void HandleOnAdClosed(object sender, EventArgs args)
+    {
+        message.text = "Ad Closed";
+        app.aux.Mute(false);
+    }
+
+    public void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
+    {
+        message.text = "Ad Failed To Load" + args.LoadAdError;
+    }
+
+    public void HandleOnAdOpened(object sender, EventArgs args)
+    {
+        message.text = "Ad Opened";
+        app.aux.Mute(true);
+    }
 }

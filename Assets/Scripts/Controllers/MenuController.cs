@@ -12,7 +12,7 @@ public class MenuController : Element
     public void SetStart()
     {
         app.model.currentState = MainModel.ChooseState.MainMenu;
-        app.cameraController.OnMenuMove(tapPlaces);
+        app.cam.OnMenuMove(tapPlaces);
     }
 
     public void MenuOutTwinner()
