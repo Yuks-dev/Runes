@@ -15,6 +15,8 @@ public class MainModel : Element
 
     public List<StateData> stateList = new List<StateData>(4);
     public List<RunesData> runesList = new List<RunesData>(24);
+    public List<RunesData> runesCollection = new List<RunesData>(24);
+
 
     public int[] availableRunes = new int[24];
 
