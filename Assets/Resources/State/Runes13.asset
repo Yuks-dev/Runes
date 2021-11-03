@@ -29,3 +29,48 @@ MonoBehaviour:
   - Your inner world and mental health
   - The future
   - 
+  stateDescriptionRu:
+  - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439 1"
+  - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439 2"
+  - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439 3"
+  - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439 4"
+  - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439 5"
+  - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439 6"
+  - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439 7"
+  - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439 8"
+  - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439 9"
+  - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439 10"
+  - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439 11"
+  - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439 12"
+  - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439 13"
+  - 
+  stateDescriptionEsp:
+  - "Espa\xF1ol 1"
+  - "Espa\xF1ol 2"
+  - "Espa\xF1ol 3"
+  - "Espa\xF1ol 4"
+  - "Espa\xF1ol 5"
+  - "Espa\xF1ol 6"
+  - "Espa\xF1ol 7"
+  - "Espa\xF1ol 8"
+  - "Espa\xF1ol 9"
+  - "Espa\xF1ol 10"
+  - "Espa\xF1ol 11"
+  - "Espa\xF1ol 12"
+  - "Espa\xF1ol 13"
+  - 
+  stateDescriptionKor:
+  - Korean 1
+  - Korean 2
+  - Korean 3
+  - Korean 4
+  - Korean 5
+  - Korean 6
+  - Korean 7
+  - Korean 8
+  - Korean 9
+  - Korean 10
+  - Korean 11
+  - Korean 12
+  - Korean 13
+  - 

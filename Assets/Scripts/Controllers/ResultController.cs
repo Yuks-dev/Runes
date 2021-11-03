@@ -6,6 +6,8 @@ public class ResultController : Element
     public GameObject runes4;
     public GameObject runes7;
     public GameObject runes13;
+    public Sprite activePoint;
+    public Sprite inactivePoint;
     [Space]
     public Image runeImage;
     public Text runeName;
@@ -34,7 +36,21 @@ public class ResultController : Element
     {
         runeImage.sprite = app.controller.runesOnScene[index].RuneImage;
         runeName.text = app.controller.runesOnScene[index].RuneName;
+
         runeDescribe.text = app.controller.runesOnScene[index].RuneDescription;
+        if(app.model.language == MainModel.Localization.Russian)
+            runeDescribe.text = app.controller.runesOnScene[index].RuneDescriptionRu;
+        if (app.model.language == MainModel.Localization.Spanish)
+            runeDescribe.text = app.controller.runesOnScene[index].RuneDescriptionEsp;
+        if (app.model.language == MainModel.Localization.Korean)
+            runeDescribe.text = app.controller.runesOnScene[index].RuneDescriptionKor;
+
         stateText.text = app.controller.state.StateDescription[index];
+        if(app.model.language == MainModel.Localization.Russian)
+            stateText.text = app.controller.state.StateDescriptionRu[index];
+        if (app.model.language == MainModel.Localization.Spanish)
+            stateText.text = app.controller.state.StateDescriptionEsp[index];
+        if (app.model.language == MainModel.Localization.Korean)
+            stateText.text = app.controller.state.StateDescriptionKor[index];
     }
 }

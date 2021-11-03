@@ -18,12 +18,13 @@ public class InterfaceController : Element
 
     private bool isShown = false;
     private int stateCount = 0;
+    private bool descActive = false;
 
     private void Awake() => app.controller.ui = this;
 
     public void DescriptionButton()
     {
-        if (!isShown)
+        if (!isShown && descActive)
             ShowDescription();
         else
             HideDescription();
@@ -31,9 +32,10 @@ public class InterfaceController : Element
 
     public void ShowDescription()
     {
+        descActive = true;
         descBubble.DOAnchorPos(new Vector3(0,0,0),1);
-        description.DOAnchorPosY(-60, 1);
-        descPanel.transform.DOLocalMoveY(410, 1).SetEase(Ease.OutQuart);
+        description.DOAnchorPosY(0, 1);
+        descPanel.transform.DOLocalMoveY(220, 1).SetEase(Ease.OutQuart);
         isShown = true;
     }
 
@@ -55,6 +57,7 @@ public class InterfaceController : Element
     {
         ActivatePanels(true);
         stateText.text = app.controller.state.StateDescription[app.controller.runeCount];
+        StateLocalization();
         stateCount++;
 
         if (app.controller.state.StateDescription.Length == stateCount)
@@ -75,11 +78,29 @@ public class InterfaceController : Element
         runeNumber.text = index.ToString();
         runeName.text = app.controller.runesOnScene[index - 1].RuneName;
         runeDescribe.text = app.controller.runesOnScene[index - 1].RuneDescription;
+
+        if(app.model.language == MainModel.Localization.Russian)
+            runeDescribe.text = app.controller.runesOnScene[index - 1].RuneDescriptionRu;
+        if (app.model.language == MainModel.Localization.Spanish)
+            runeDescribe.text = app.controller.runesOnScene[index - 1].RuneDescriptionEsp;
+        if (app.model.language == MainModel.Localization.Korean)
+            runeDescribe.text = app.controller.runesOnScene[index - 1].RuneDescriptionKor;
     }
 
     private void ActivatePanels(bool state)
     {
         statePanel.SetActive(state);
         descPanel.SetActive(state);
+    }
+
+    private void StateLocalization()
+    {
+        if (app.model.language == MainModel.Localization.Russian)
+            stateText.text = app.controller.state.StateDescriptionRu[app.controller.runeCount];
+        if (app.model.language == MainModel.Localization.Spanish)
+            stateText.text = app.controller.state.StateDescriptionEsp[app.controller.runeCount];
+        if (app.model.language == MainModel.Localization.Korean)
+            stateText.text = app.controller.state.StateDescriptionKor[app.controller.runeCount];
+
     }
 }

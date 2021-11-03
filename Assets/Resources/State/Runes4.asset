@@ -20,3 +20,21 @@ MonoBehaviour:
   - Positive influences and assets that help resolve the current situation
   - The future and  the outcome
   - 
+  stateDescriptionRu:
+  - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439 1"
+  - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439 2"
+  - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439 3"
+  - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439 4"
+  - 
+  stateDescriptionEsp:
+  - "Espa\xF1ol 1"
+  - "Espa\xF1ol 2"
+  - "Espa\xF1ol 3"
+  - "Espa\xF1ol 4"
+  - 
+  stateDescriptionKor:
+  - Korean 1
+  - Korean 2
+  - Korean 3
+  - Korean 4
+  - 

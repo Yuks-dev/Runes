@@ -9,11 +9,24 @@ public class CameraController : Element
     public Transform chestView;
     public Transform beginView;
     public Transform quickDivinationView;
+    public Transform runeCollectionView;
 
     private void Awake() => app.cam = this;
 
     public void GameCameraView() => MovingCam(gameView, 2);         
     public void RuneCameraView() => MovingCam(runeView, 2.5f);
+
+    public void RuneCollectionView(GameObject objectOn)
+    {
+        app.aux.TransitionSound();
+
+        Sequence move = DOTween.Sequence();
+        move.Append(transform.DORotateQuaternion(runeCollectionView.rotation, 2).SetEase(Ease.OutBack));
+        move.Join(transform.DOMove(runeCollectionView.position, 2).SetEase(Ease.InBack));
+        move.AppendCallback(() => { objectOn.SetActive(true); });
+    }
+        
+
     public void ChestCameraView()
     {
         app.aux.TransitionSound();

@@ -50,7 +50,15 @@ public class QuickDivController : Element
         app.aux.OpenSound();
 
         runeName.text = app.model.runesList[rnd].RuneName;
+
         divinationText.text = app.model.runesList[rnd].RuneDescription;
+        if(app.model.language == MainModel.Localization.Russian)
+            divinationText.text = app.model.runesList[rnd].RuneDescriptionRu;
+        if (app.model.language == MainModel.Localization.Spanish)
+            divinationText.text = app.model.runesList[rnd].RuneDescriptionEsp;
+        if (app.model.language == MainModel.Localization.Korean)
+            divinationText.text = app.model.runesList[rnd].RuneDescriptionKor;
+
         Instantiate(runeSign, quickRune.transform.position, transform.rotation, view.gameObject.transform);
     }
 
