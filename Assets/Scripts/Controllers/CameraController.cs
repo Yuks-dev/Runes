@@ -25,7 +25,6 @@ public class CameraController : Element
         move.Join(transform.DOMove(runeCollectionView.position, 2).SetEase(Ease.InBack));
         move.AppendCallback(() => { objectOn.SetActive(true); });
     }
-        
 
     public void ChestCameraView()
     {

@@ -5,7 +5,6 @@ public class MenuController : Element
 {
     public GameObject main;
     public GameObject tapPlaces;
-    //public GameObject menu;
 
     private void Start() => SetStart();
 

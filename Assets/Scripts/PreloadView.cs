@@ -40,7 +40,6 @@ public class PreloadView : MonoBehaviour
         setLanguage = index;
         PlayerPrefs.SetInt("SaveLanguage", setLanguage);
         PlayerPrefs.Save();
-        Debug.Log("Game data saved!");
     }
 
     public void LoadLanguage()

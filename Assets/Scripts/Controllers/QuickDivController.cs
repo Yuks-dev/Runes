@@ -16,7 +16,6 @@ public class QuickDivController : Element
     private int rnd;
     private GameObject runeSign;
     private bool onRotate = true;
-    //public bool adsOn = true;
 
     private void Update()
     {
@@ -29,9 +28,17 @@ public class QuickDivController : Element
         rnd = Random.Range(0, 24);
         runeSign = app.model.runesList[Random.Range(0, 24)].RunePrefab;
         menu.tapPlaces.gameObject.SetActive(false);
-
         app.cam.OnQuickMove(counter.gameObject);
         RuneAnimation();
+    }
+
+    public void BackToMenu()
+    {
+        app.ad.ShowInterstitialAD();
+        menu.SetStart();
+        onRotate = true;
+        for (int i = view.transform.childCount; i > 0; --i)
+            DestroyImmediate(view.transform.GetChild(0).gameObject);
     }
 
     private void RuneAnimation()
@@ -48,28 +55,19 @@ public class QuickDivController : Element
         counter.gameObject.SetActive(false);
         divinationPanel.gameObject.SetActive(true);
         app.aux.OpenSound();
-
         runeName.text = app.model.runesList[rnd].RuneName;
-
         divinationText.text = app.model.runesList[rnd].RuneDescription;
-        if(app.model.language == MainModel.Localization.Russian)
+        DescriptionLocalization();
+        Instantiate(runeSign, quickRune.transform.position, transform.rotation, view.gameObject.transform);
+    }
+
+    private void DescriptionLocalization()
+    {
+        if (app.model.language == MainModel.Localization.Russian)
             divinationText.text = app.model.runesList[rnd].RuneDescriptionRu;
         if (app.model.language == MainModel.Localization.Spanish)
             divinationText.text = app.model.runesList[rnd].RuneDescriptionEsp;
         if (app.model.language == MainModel.Localization.Korean)
             divinationText.text = app.model.runesList[rnd].RuneDescriptionKor;
-
-        Instantiate(runeSign, quickRune.transform.position, transform.rotation, view.gameObject.transform);
-    }
-
-    public void BackToMenu()
-    {
-        //if(adsOn)
-        app.ad.ShowInterstitialAD();
-        menu.SetStart();
-        //adsOn = false;
-        onRotate = true;
-        for (int i = view.transform.childCount; i > 0; --i)
-            DestroyImmediate(view.transform.GetChild(0).gameObject);
     }
 }

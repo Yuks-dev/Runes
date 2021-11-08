@@ -12,9 +12,9 @@ public class RuneCollectionView : Element
     public Text progressText;
 
     private void Start() => SetCollection();
-    private void OnEnable() => SetCollection();
+    private void Update() =>  SetCollection();
 
-    public void SetCollection()
+    private void SetCollection()
     {
         float count = app.model.availableRunes[runeIndex];
         progressText.text = count.ToString();
@@ -33,6 +33,12 @@ public class RuneCollectionView : Element
             playReward.gameObject.SetActive(false);
             runeImage.color = new Color(1, 1, 1, 1);
         }
-            
+
+        if (count > 0 && count < 50)
+        {
+            runeSign.gameObject.SetActive(true);
+            playReward.gameObject.SetActive(false);
+            runeImage.color = new Color(1, 1, 1, 1);
+        }    
     }
 }

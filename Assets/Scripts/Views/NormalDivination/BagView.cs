@@ -17,10 +17,7 @@ public class BagView : Element
         startPos = transform.position;
     }
 
-    private void Update()
-    {
-        progress.fillAmount -= 0.1f * Time.deltaTime;
-    }
+    private void Update() => progress.fillAmount -= 0.1f * Time.deltaTime;
 
     public void TapChest()
     {

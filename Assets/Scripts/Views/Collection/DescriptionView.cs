@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,6 +24,7 @@ public class DescriptionView : Element
     {
         close.gameObject.SetActive(false);
         gameObject.SetActive(true);
+        app.ad.RequestRewarded();
 
         if (app.model.availableRunes[index] > 0)
         {
@@ -37,12 +39,17 @@ public class DescriptionView : Element
         }
         else
         {
+            app.ad.chooseRune = index;
             inactivePanel.SetActive(true);
             activePanel.SetActive(false);
         }
     }
 
-    private void OnDisable() => close.gameObject.SetActive(true);
+    private void OnDisable()
+    {
+        close.gameObject.SetActive(true);
+    }
+        
 
     private void SetUI(int index)
     {

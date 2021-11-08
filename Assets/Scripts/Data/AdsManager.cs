@@ -6,8 +6,12 @@ using UnityEngine.UI;
 public class AdsManager : Element
 {
     public Text message;
+    public int chooseRune = -1;
+
     private InterstitialAd interstitialAd;
+    private RewardedAd rewardedAd;
     private string interstitialAd_ID = "ca-app-pub-3940256099942544/1033173712";
+    private string rewardedAd_ID = "ca-app-pub-3940256099942544/5224354917";
 
     void Start()
     {
@@ -28,10 +32,38 @@ public class AdsManager : Element
         this.interstitialAd.LoadAd(adRequest);
     }
 
+    public void RequestRewarded()
+    {
+        this.rewardedAd = new RewardedAd(rewardedAd_ID);
+
+        this.rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
+        this.rewardedAd.OnAdClosed += HandleOnAdClosed;
+        this.rewardedAd.OnAdLoaded += HandleOnAdLoaded;
+        this.rewardedAd.OnAdFailedToLoad += HandleOnAdFailedToLoad;
+        this.rewardedAd.OnAdOpening += HandleOnAdOpened;
+
+        AdRequest request = new AdRequest.Builder().Build();
+        this.rewardedAd.LoadAd(request);
+    }
+
+    public void HandleUserEarnedReward(object sender, Reward reward)
+    {
+        string type = reward.Type;
+        int amount = (int)reward.Amount;
+        app.model.availableRunes[chooseRune] += 1;
+        app.model.SaveData();
+    }
+
     public void ShowInterstitialAD()
     {
         if (this.interstitialAd.IsLoaded())
             this.interstitialAd.Show();
+    }
+
+    public void ShowRewardedAD()
+    {
+        if (this.rewardedAd != null)
+            this.rewardedAd.Show();
     }
 
     public void ClearAds()

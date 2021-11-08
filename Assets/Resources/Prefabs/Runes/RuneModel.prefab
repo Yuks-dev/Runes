@@ -61,7 +61,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5573986185942358178, guid: 8c530846a81104cee937c1e231ef5b66, type: 3}
---- !u!114 &6964254997912083384
+--- !u!114 &2161623089280887269
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,12 +70,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 9111550048711950521}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12358fd3dd81a4d10b7e10ab8d8107e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 30e4cf61cac204699bce87a70eaafd82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shining: {fileID: 5120181302516133550, guid: 9ef98567116884d67802b0b44531f67a, type: 3}
   magicSmoke: {fileID: 6236732080869881796, guid: 91e938cec2497418184e1fe356e39607,
     type: 3}
+--- !u!114 &8736403199297561933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9111550048711950521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ed1c7b9f876648fd9b06454e3ed2d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationComponent: {fileID: 2161623089280887269}
 --- !u!1001 &8265182491382808040
 PrefabInstance:
   m_ObjectHideFlags: 0

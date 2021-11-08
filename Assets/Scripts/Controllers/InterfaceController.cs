@@ -32,6 +32,7 @@ public class InterfaceController : Element
 
     public void ShowDescription()
     {
+        app.aux.OpenSound();
         descActive = true;
         descBubble.DOAnchorPos(new Vector3(0,0,0),1);
         description.DOAnchorPosY(0, 1);
@@ -78,13 +79,7 @@ public class InterfaceController : Element
         runeNumber.text = index.ToString();
         runeName.text = app.controller.runesOnScene[index - 1].RuneName;
         runeDescribe.text = app.controller.runesOnScene[index - 1].RuneDescription;
-
-        if(app.model.language == MainModel.Localization.Russian)
-            runeDescribe.text = app.controller.runesOnScene[index - 1].RuneDescriptionRu;
-        if (app.model.language == MainModel.Localization.Spanish)
-            runeDescribe.text = app.controller.runesOnScene[index - 1].RuneDescriptionEsp;
-        if (app.model.language == MainModel.Localization.Korean)
-            runeDescribe.text = app.controller.runesOnScene[index - 1].RuneDescriptionKor;
+        DescriptionLocalization(index);
     }
 
     private void ActivatePanels(bool state)
@@ -101,6 +96,15 @@ public class InterfaceController : Element
             stateText.text = app.controller.state.StateDescriptionEsp[app.controller.runeCount];
         if (app.model.language == MainModel.Localization.Korean)
             stateText.text = app.controller.state.StateDescriptionKor[app.controller.runeCount];
+    }
 
+    private void DescriptionLocalization(int index)
+    {
+        if (app.model.language == MainModel.Localization.Russian)
+            runeDescribe.text = app.controller.runesOnScene[index - 1].RuneDescriptionRu;
+        if (app.model.language == MainModel.Localization.Spanish)
+            runeDescribe.text = app.controller.runesOnScene[index - 1].RuneDescriptionEsp;
+        if (app.model.language == MainModel.Localization.Korean)
+            runeDescribe.text = app.controller.runesOnScene[index - 1].RuneDescriptionKor;
     }
 }
