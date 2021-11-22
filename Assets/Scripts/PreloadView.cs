@@ -14,8 +14,8 @@ public class PreloadView : MonoBehaviour
     {
         LoadLanguage();
 
-        //if (setLanguage >= 0)
-        //    Loading();
+        if (setLanguage >= 0)
+            Loading();
     }
 
     public void Loading()

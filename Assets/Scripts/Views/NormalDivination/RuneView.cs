@@ -19,6 +19,7 @@ public class RuneView : Element
 
     private void OnMouseDown()
     {
+        animationComponent.RuneTaken(gameObject);
         app.aux.RuneSound();
         transform.rotation = Quaternion.identity;
         rb.freezeRotation = true;
@@ -37,17 +38,23 @@ public class RuneView : Element
 
     private void OnCollisionEnter(Collision collision)
     {
+        animationComponent.StopRuneTaken();
+        var blowing = animationComponent.blow.GetComponent<ParticleSystem>();
+        blowing.Play();
+
         if (collision.gameObject.CompareTag("RunePlace"))
         {
+            
             runeSign = app.controller.runesOnScene[app.controller.runeCount].RunePrefab;
-            app.controller.runeCount++;
             app.aux.PortalSound();
+            app.controller.runeCount++;
 
             Freezer();
             animationComponent.RuneAnimation(runeSign);
- 
+
             app.controller.ui.DescriptionText(app.controller.runeCount);
             app.controller.MakeAvailable();
+            
         }
         else
             app.aux.RuneSound();
@@ -56,7 +63,7 @@ public class RuneView : Element
     private void Freezer()
     {
         app.controller.runeActive = true;
-        rb.useGravity = false;
+        rb.isKinematic = true;
         rb.freezeRotation = true;
         mc.enabled = false;
     }

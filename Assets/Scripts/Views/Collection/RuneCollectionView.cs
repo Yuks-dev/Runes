@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class RuneCollectionView : Element
 {
@@ -11,7 +12,17 @@ public class RuneCollectionView : Element
     public Image progressBar;
     public Text progressText;
 
-    private void Start() => SetCollection();
+    private void Start()
+    {
+        SetCollection();
+    }
+
+    private void OnEnable()
+    {
+        gameObject.transform.localScale = new Vector3(0, 0);
+        gameObject.transform.DOScale(new Vector3(1, 1), 1).SetEase(Ease.OutBack);
+    }
+
     private void Update() =>  SetCollection();
 
     private void SetCollection()

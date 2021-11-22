@@ -4,6 +4,7 @@ using DG.Tweening;
 
 public class InterfaceController : Element
 {
+    public GameObject runeAddPanel;
     public GameObject descPanel;
     public RectTransform descBubble;
     public RectTransform description;
@@ -35,7 +36,7 @@ public class InterfaceController : Element
         app.aux.OpenSound();
         descActive = true;
         descBubble.DOAnchorPos(new Vector3(0,0,0),1);
-        description.DOAnchorPosY(0, 1);
+        description.DOAnchorPosY(20, 1);
         descPanel.transform.DOLocalMoveY(220, 1).SetEase(Ease.OutQuart);
         isShown = true;
     }
@@ -46,12 +47,6 @@ public class InterfaceController : Element
         description.DOAnchorPosY(-260, 1);
         descPanel.transform.DOLocalMoveY(-90, 1).SetEase(Ease.OutQuart);
         isShown = false;
-    }
-
-    public void PrepareNextRune()
-    {
-        runeName.gameObject.SetActive(false);
-        HideDescription();
     }
 
     public void SetState() // Show state and result

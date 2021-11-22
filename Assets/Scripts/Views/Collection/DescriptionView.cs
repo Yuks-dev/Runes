@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,7 +23,6 @@ public class DescriptionView : Element
     {
         close.gameObject.SetActive(false);
         gameObject.SetActive(true);
-        app.ad.RequestRewarded();
 
         if (app.model.availableRunes[index] > 0)
         {
@@ -32,6 +30,7 @@ public class DescriptionView : Element
             inactivePanel.SetActive(false);
             SetUI(index);
             Counter(index);
+
             if (app.model.availableRunes[index] >= 50)
                 runeImg.sprite = goldenRune;
             else

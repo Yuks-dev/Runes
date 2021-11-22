@@ -5,28 +5,37 @@ using UnityEngine.UI;
 
 public class AdsManager : Element
 {
-    public Text message;
+    public Text messageIntrestitial;
+    public Text messageRewarded;
+
     public int chooseRune = -1;
+    public bool rewardedLoad = false;
 
     private InterstitialAd interstitialAd;
     private RewardedAd rewardedAd;
+
     private string interstitialAd_ID = "ca-app-pub-3940256099942544/1033173712";
     private string rewardedAd_ID = "ca-app-pub-3940256099942544/5224354917";
 
-    void Start()
+    private void Start()
     {
-        MobileAds.Initialize((initStatus) => { });
-        RequestInterstitial();
+        MobileAds.Initialize((initStatus) =>
+        {
+            RequestInterstitial();
+        });
     }
 
     public void RequestInterstitial()
     {
+        if (this.interstitialAd != null)
+            this.interstitialAd.Destroy();
+
         this.interstitialAd = new InterstitialAd(interstitialAd_ID);
 
-        this.interstitialAd.OnAdClosed += HandleOnAdClosed;
-        this.interstitialAd.OnAdLoaded += HandleOnAdLoaded;
-        this.interstitialAd.OnAdFailedToLoad += HandleOnAdFailedToLoad;
-        this.interstitialAd.OnAdOpening += HandleOnAdOpened;
+        this.interstitialAd.OnAdClosed += InterstitialAdClosed;
+        this.interstitialAd.OnAdLoaded += InterstitialAdLoaded;
+        this.interstitialAd.OnAdFailedToLoad += InterstitialAdFailedToLoad;
+        this.interstitialAd.OnAdOpening += InterstitialAdOpened;
 
         AdRequest adRequest = new AdRequest.Builder().Build();
         this.interstitialAd.LoadAd(adRequest);
@@ -37,21 +46,14 @@ public class AdsManager : Element
         this.rewardedAd = new RewardedAd(rewardedAd_ID);
 
         this.rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
-        this.rewardedAd.OnAdClosed += HandleOnAdClosed;
-        this.rewardedAd.OnAdLoaded += HandleOnAdLoaded;
-        this.rewardedAd.OnAdFailedToLoad += HandleOnAdFailedToLoad;
-        this.rewardedAd.OnAdOpening += HandleOnAdOpened;
+        this.rewardedAd.OnAdClosed += RewardedAdClosed;
+        this.rewardedAd.OnAdLoaded += RewardedAdLoaded;
+        this.rewardedAd.OnAdFailedToLoad += RewardedAdFailedToLoad;
+        this.rewardedAd.OnAdOpening += RewardedAdOpened;
+        rewardedAd.OnAdFailedToShow += RewardedFaildeToShow;
 
         AdRequest request = new AdRequest.Builder().Build();
         this.rewardedAd.LoadAd(request);
-    }
-
-    public void HandleUserEarnedReward(object sender, Reward reward)
-    {
-        string type = reward.Type;
-        int amount = (int)reward.Amount;
-        app.model.availableRunes[chooseRune] += 1;
-        app.model.SaveData();
     }
 
     public void ShowInterstitialAD()
@@ -62,35 +64,82 @@ public class AdsManager : Element
 
     public void ShowRewardedAD()
     {
-        if (this.rewardedAd != null)
-            this.rewardedAd.Show();
+        if (rewardedAd.IsLoaded() || rewardedAd != null)
+        {
+            messageRewarded.text = "Show rewarded";
+            rewardedAd.Show();
+        }
     }
 
-    public void ClearAds()
+    public void ClearInterstitial()
     {
         if (this.interstitialAd != null)
             this.interstitialAd.Destroy();
     }
 
-    public void HandleOnAdLoaded(object sender, EventArgs args)
+
+    // Events ADS Rewarded
+
+    private void HandleUserEarnedReward(object sender, Reward reward)
     {
-        message.text = "Ad Loaded";
+        string type = reward.Type;
+        int amount = (int)reward.Amount;
+        app.model.availableRunes[chooseRune] += 1;
+        app.model.SaveData();
     }
 
-    public void HandleOnAdClosed(object sender, EventArgs args)
+    private void RewardedAdLoaded(object sender, EventArgs args)
     {
-        message.text = "Ad Closed";
+        messageRewarded.text = "RewardedAd Loaded";
+        rewardedLoad = true;
+    }
+
+    private void RewardedAdClosed(object sender, EventArgs args)
+    {
+        messageRewarded.text = "RewardedAd Closed";
+        app.aux.Mute(false);
+        RequestRewarded();
+    }
+
+    private void RewardedAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
+    {
+        messageRewarded.text = "RewardedAd Failed To Load" + args.LoadAdError;
+        rewardedLoad = false;
+    }
+
+    private void RewardedFaildeToShow(object sender, EventArgs args)
+    {
+        messageRewarded.text = "RewardedAd Failed To Show";
+    }
+
+    private void RewardedAdOpened(object sender, EventArgs args)
+    {
+        messageRewarded.text = "RewardedAd Opened";
+        app.aux.Mute(true);
+    }
+
+
+    // Events ADS Interstitial
+
+    private void InterstitialAdLoaded(object sender, EventArgs args)
+    {
+        messageIntrestitial.text = "InterstitialAd Loaded";
+    }
+
+    private void InterstitialAdClosed(object sender, EventArgs args)
+    {
+        messageIntrestitial.text = "InterstitialAd Closed";
         app.aux.Mute(false);
     }
 
-    public void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
+    private void InterstitialAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
     {
-        message.text = "Ad Failed To Load" + args.LoadAdError;
+        messageIntrestitial.text = "InterstitialAd Failed To Load" + args.LoadAdError;
     }
 
-    public void HandleOnAdOpened(object sender, EventArgs args)
+    private void InterstitialAdOpened(object sender, EventArgs args)
     {
-        message.text = "Ad Opened";
+        messageIntrestitial.text = "InterstitialAd Opened";
         app.aux.Mute(true);
     }
 }

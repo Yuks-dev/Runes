@@ -4,6 +4,8 @@ using TMPro;
 
 public class MainModel : Element
 {
+    public GameObject winEffect;
+
     public TMP_FontAsset koreanFont;
     public TMP_FontAsset latinFont;
     public TMP_FontAsset cyrilicFont;
@@ -34,6 +36,11 @@ public class MainModel : Element
 
     public void LoadData() => saveSystem.LoadAppData();
     public void SaveData() => saveSystem.SaveAppData();
+
+    private void Start()
+    {
+        Instantiate(mainMenu, new Vector3(0,2,0), Quaternion.identity);
+    }
 
     private void LoadLanguage()
     {

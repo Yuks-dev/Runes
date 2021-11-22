@@ -14,6 +14,8 @@ public class ResultController : Element
     public Text stateText;
     public Text runeDescribe;
 
+    private void OnEnable() => app.model.winEffect.SetActive(true);
+
     private void Start()
     {
         app.ad.RequestInterstitial();
@@ -30,7 +32,12 @@ public class ResultController : Element
         ShowRuneResult(0);
     }
 
-    private void OnDisable() => app.ad.ShowInterstitialAD();
+    private void OnDisable()
+    {
+        app.model.winEffect.SetActive(false);
+        app.ad.ShowInterstitialAD();
+    }
+        
 
     public void ShowRuneResult(int index)
     {
