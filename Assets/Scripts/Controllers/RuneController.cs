@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class RuneController : Element
 {
-    public bool runeActive = true;
+    public bool canTake;
+    public bool runeLaunch;
+
     public int runeCount;
 
     private List<RunesData> runesTempList = new List<RunesData>(24);
@@ -23,6 +25,7 @@ public class RuneController : Element
 
     public void MakeAvailable()
     {
+        runeCount++;
         app.model.availableRunes[runesOnScene[runeCount - 1].RuneIndex] += 1;
         app.model.SaveData();
     }

@@ -3,7 +3,6 @@ using UnityEngine;
 public class RuneView : Element
 {
     public RuneAnimationComponent animationComponent;
-    private GameObject runeSign;
     private Vector3 screenPoint;
     private Rigidbody rb;
     private MeshCollider mc;
@@ -15,54 +14,40 @@ public class RuneView : Element
         mc = GetComponent<MeshCollider>();
     }
 
-    private void OnMouseExit() => rb.freezeRotation = false;
-
-    private void OnMouseDown()
-    {
-        animationComponent.RuneTaken(gameObject);
-        app.aux.RuneSound();
-        transform.rotation = Quaternion.identity;
-        rb.freezeRotation = true;
-    }
-
     private void OnMouseDrag()
     {
-        if (!app.controller.runeActive)
+        if (app.controller.canTake)
         {
             Vector3 down = new Vector3(transform.position.x, 3f, transform.position.z);
             Vector3 drag = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
             screenPoint = Camera.main.WorldToScreenPoint(down);
             transform.position = Camera.main.ScreenToWorldPoint(drag);
+        }  
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("RunePlace") && !app.controller.runeLaunch)
+        {
+            app.aux.PortalSound();
+            app.controller.canTake = false;
+            app.controller.runeLaunch = true;
+
+            GameObject runeSign = app.controller.runesOnScene[app.controller.runeCount].RunePrefab;
+            animationComponent.RuneAnimation(runeSign);
+            app.controller.MakeAvailable();
+            Freezer();
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        animationComponent.StopRuneTaken();
-        var blowing = animationComponent.blow.GetComponent<ParticleSystem>();
-        blowing.Play();
-
-        if (collision.gameObject.CompareTag("RunePlace"))
-        {
-            
-            runeSign = app.controller.runesOnScene[app.controller.runeCount].RunePrefab;
-            app.aux.PortalSound();
-            app.controller.runeCount++;
-
-            Freezer();
-            animationComponent.RuneAnimation(runeSign);
-
-            app.controller.ui.DescriptionText(app.controller.runeCount);
-            app.controller.MakeAvailable();
-            
-        }
-        else
-            app.aux.RuneSound();
+        animationComponent.blow.GetComponent<ParticleSystem>().Play();
+        app.aux.RuneSound();
     }
 
     private void Freezer()
     {
-        app.controller.runeActive = true;
         rb.isKinematic = true;
         rb.freezeRotation = true;
         mc.enabled = false;

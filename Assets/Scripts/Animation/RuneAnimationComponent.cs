@@ -8,23 +8,12 @@ public class RuneAnimationComponent : Element
     public GameObject blow;
     public GameObject blowSign;
 
-    private Sequence punchRune;
-
-    public void RuneTaken(GameObject rune)
-    {
-        punchRune = DOTween.Sequence();
-        punchRune.Append(rune.transform.DOScale(1.2f, 0.2f));
-        punchRune.Append(rune.transform.DOScale(1f, 0.2f).SetEase(Ease.OutBack));
-        punchRune.SetLoops(3);
-    }
-
-    public void StopRuneTaken() => punchRune.Kill();
-
+    private Sequence showRune;
 
     public void RuneAnimation(GameObject runeSign)
     {
         Spawner(magicSmoke);
-        Sequence showRune = DOTween.Sequence();
+        showRune = DOTween.Sequence();
         showRune.PrependInterval(0.5f);
 
         // Goes up
@@ -33,32 +22,27 @@ public class RuneAnimationComponent : Element
 
         // Rotate
         showRune.Join(transform.DORotate(new Vector3(0, 0, 180), 2).SetEase(Ease.InElastic));
-        showRune.AppendCallback(() =>
-        {
+        showRune.AppendCallback(() => {
             Spawner(runeSign);
             Spawner(shining);
             Spawner(blowSign);
-
-            app.controller.ui.runeAddPanel.gameObject.SetActive(true);
-            app.controller.ui.ShowDescription();
-            app.controller.ui.runeName.gameObject.SetActive(true);
+            app.controller.ui.SetDescription();
             app.aux.RotateSound();
         });
         showRune.AppendInterval(5);
 
         // Fly away
-        showRune.AppendCallback(() =>
-        {
-            app.controller.ui.runeName.gameObject.SetActive(false);
-            app.controller.ui.HideDescription();
+        showRune.AppendCallback(() => {
+            app.controller.ui.StopDescription();
             app.cam.GameCameraView();
+            app.controller.ui.SetState();
+            
         });
         showRune.Append(transform.DOMove(new Vector3(3, 8, -7), 2));
-        showRune.AppendCallback(() =>
-        {
-            app.controller.ui.SetState();
-            app.controller.runeActive = false;
+        showRune.AppendCallback(() => {
             Destroy(gameObject);
+            app.controller.canTake = true;
+            app.controller.runeLaunch = false;
         });
     }
 
@@ -66,4 +50,7 @@ public class RuneAnimationComponent : Element
     {
         Instantiate(obj, transform.position, obj.transform.rotation, gameObject.transform);
     }
+
+    private void OnDestroy() => showRune.Kill();
+
 }

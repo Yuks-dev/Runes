@@ -21,6 +21,7 @@ public class BagView : Element
 
     public void TapChest()
     {
+        app.controller.canTake = false;
         app.aux.ChestSound();
         progress.fillAmount += 0.2f;
         ShakingBag(startPos);
@@ -28,7 +29,13 @@ public class BagView : Element
         if (progress.fillAmount == 1)
         {
             runesFrombag++;
-            progress.gameObject.transform.DOPunchScale(new Vector3(0.02f, 0.1f), 0.3f, 1);
+
+            Sequence progScale = DOTween.Sequence();
+            progScale.Append(progress.transform.DOScale(new Vector3(1.05f, 1.2f, 0), 0.1f));
+            progScale.Join(progress.DOColor(Color.green, 0.1f));
+            progScale.Append(progress.transform.DOScale(new Vector3(1f, 1f, 0), 0.1f));
+            progScale.Join(progress.DOColor(Color.white, 0.1f));
+
             SpawnRunes(runesParent);
         }
 
@@ -44,9 +51,11 @@ public class BagView : Element
     {
         app.controller.ui.SetState();
         app.cam.GameCameraView();
-        Sequence bagOut = DOTween.Sequence();
-        bagOut.Append(transform.DOMoveY(10, 1).SetEase(Ease.InBack));
-        bagOut.AppendCallback(() => { app.controller.runeActive = false; Destroy(gameObject); });
+
+        transform.DOMoveY(10, 1).SetEase(Ease.InBack).OnComplete(() => {
+            app.controller.canTake = true;
+            Destroy(gameObject);
+        });
     }
 
     private void SpawnRunes(Transform parent) // Component
