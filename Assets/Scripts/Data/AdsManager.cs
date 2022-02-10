@@ -1,21 +1,19 @@
 using UnityEngine;
 using System;
 using GoogleMobileAds.Api;
-using UnityEngine.UI;
 
 public class AdsManager : Element
 {
-    public Text messageIntrestitial;
-    public Text messageRewarded;
-
     public int chooseRune = -1;
     public bool rewardedLoad = false;
 
     private InterstitialAd interstitialAd;
     private RewardedAd rewardedAd;
 
-    private string interstitialAd_ID = "ca-app-pub-3940256099942544/1033173712";
-    private string rewardedAd_ID = "ca-app-pub-3940256099942544/5224354917";
+    //private string interstitialAd_ID = "ca-app-pub-3940256099942544/1033173712"; // Test ID
+    //private string rewardedAd_ID = "ca-app-pub-3940256099942544/5224354917"; // Test ID
+    private string interstitialAd_ID = "ca-app-pub-2508878903610572/5676849079";
+    private string rewardedAd_ID = "ca-app-pub-2508878903610572/7536725650";
 
     private void Start()
     {
@@ -65,10 +63,7 @@ public class AdsManager : Element
     public void ShowRewardedAD()
     {
         if (rewardedAd.IsLoaded() || rewardedAd != null)
-        {
-            messageRewarded.text = "Show rewarded";
             rewardedAd.Show();
-        }
     }
 
     public void ClearInterstitial()
@@ -90,31 +85,27 @@ public class AdsManager : Element
 
     private void RewardedAdLoaded(object sender, EventArgs args)
     {
-        messageRewarded.text = "RewardedAd Loaded";
         rewardedLoad = true;
     }
 
     private void RewardedAdClosed(object sender, EventArgs args)
     {
-        messageRewarded.text = "RewardedAd Closed";
         app.aux.Mute(false);
         RequestRewarded();
     }
 
     private void RewardedAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
     {
-        messageRewarded.text = "RewardedAd Failed To Load" + args.LoadAdError;
         rewardedLoad = false;
     }
 
     private void RewardedFaildeToShow(object sender, EventArgs args)
     {
-        messageRewarded.text = "RewardedAd Failed To Show";
+
     }
 
     private void RewardedAdOpened(object sender, EventArgs args)
     {
-        messageRewarded.text = "RewardedAd Opened";
         app.aux.Mute(true);
     }
 
@@ -123,23 +114,21 @@ public class AdsManager : Element
 
     private void InterstitialAdLoaded(object sender, EventArgs args)
     {
-        messageIntrestitial.text = "InterstitialAd Loaded";
+
     }
 
     private void InterstitialAdClosed(object sender, EventArgs args)
     {
-        messageIntrestitial.text = "InterstitialAd Closed";
         app.aux.Mute(false);
     }
 
     private void InterstitialAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
     {
-        messageIntrestitial.text = "InterstitialAd Failed To Load" + args.LoadAdError;
+
     }
 
     private void InterstitialAdOpened(object sender, EventArgs args)
     {
-        messageIntrestitial.text = "InterstitialAd Opened";
         app.aux.Mute(true);
     }
 }

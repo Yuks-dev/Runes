@@ -13,8 +13,8 @@ public class QuickDivController : Element
     public Text divinationText;
     public Text runeName;
 
-    private int rnd;
-    private GameObject runeSign;
+    public int rnd;
+    public GameObject runeSign;
     private bool onRotate = true;
 
     private void Update()
@@ -26,7 +26,7 @@ public class QuickDivController : Element
     public void LaunchDivination()
     {
         rnd = Random.Range(0, 24);
-        runeSign = app.model.runesList[Random.Range(0, 24)].RunePrefab;
+        runeSign = app.model.runesList[rnd].RunePrefab;
         menu.tapPlaces.gameObject.SetActive(false);
         app.cam.OnQuickMove(counter.gameObject);
         RuneAnimation();

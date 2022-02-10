@@ -4,6 +4,7 @@ using TMPro;
 
 public class MainModel : Element
 {
+    public int onRate;
     public GameObject winEffect;
 
     public TMP_FontAsset koreanFont;

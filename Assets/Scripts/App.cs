@@ -13,6 +13,7 @@ public class App : MonoBehaviour
     public MainModel model; // Models (data, scriptable states)
     //public MainView view;   // Viewers (only get data from models, send events to controllsers)
     public RuneController controller;   // Controllers (get events from views, update models)
+    public MenuController menu;
     public CameraController cam;
     public AdsManager ad;
     public AudioController aux;
